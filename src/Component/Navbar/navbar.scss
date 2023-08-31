@@ -1,3 +1,10 @@
 .Navbar_Main{
-    padding: 20px 40px;
+   width: 100%;
+   background: aliceblue;
+   .Navbar_Sub{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 }
