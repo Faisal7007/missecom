@@ -4,6 +4,11 @@ import Design from '../Pages/Design/Design'
 import Blog from '../Pages/Blog/Blog'
 import Navbar from '../Component/Navbar/Navbar'
 import Home from '../Pages/Home/Home'
+import Cart from '../Pages/Addtocart/Cart'
+import Wish from '../Pages/Yourwishlist/Wish'
+import Footer from '../Component/Footer/Footer'
+import Copyright from '../Component/Copyright/Copyright'
+import Category from '../Component/Category/Category'
 const Routing = () => {
   return (
     <div className='Main_Routing'>
@@ -14,7 +19,12 @@ const Routing = () => {
         <Route exact path='/' element={<Home/>}/>
         <Route  path='/design' element={<Design/>}/>
         <Route  path='/blog' element={<Blog/>}/>
+        <Route  path='/cart' element={<Cart/>}/>
+        <Route  path='/wishlist' element={<Wish/>}/>
       </Routes>
+      <Category/>
+      <Footer/>
+      <Copyright/>
     </Router>
     </div>
   )

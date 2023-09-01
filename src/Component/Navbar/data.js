@@ -4,7 +4,7 @@ export const navbarmenu = [
         url:"/",
     },
     {
-        name:"Design",
+        name:"Products",
         url:"/design"
     },
     {

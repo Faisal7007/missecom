@@ -6,6 +6,12 @@ import { navbarmenu } from './data'
 import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
   const navigate= useNavigate()
+  const goToCart = () => {
+    navigate('/cart');
+  };
+  const goToWishlist = () => {
+    navigate('/wishlist');
+  };
 
   return (
     <div className='Navbar_Main'>
@@ -33,9 +39,9 @@ const Navbar = () => {
             <div className='Navbar_Icons'>
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-regular fa-user"></i>
-            <i class="fa-regular fa-heart"></i>
-            <RiRefreshLine />
-            <HiOutlineShoppingCart />
+            <i class="fa-regular fa-heart" onClick={goToWishlist} id='wish'></i>
+            <RiRefreshLine  />
+            <HiOutlineShoppingCart onClick={goToCart} id='cart' />
             </div>
         </div>
     </div>
