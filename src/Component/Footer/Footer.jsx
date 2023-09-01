@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './Footer.scss'
 import logo from '../Footer/footer_images/Logo.jpg'
 import {BsFacebook} from 'react-icons/bs'
@@ -23,7 +24,6 @@ function Footer() {
         <li className='list'>HandPrint</li>
         <li className='list'>Blog</li>
         <li className='list'>Blog</li>
-
       </div>
       <div className="footer_third_column">
         <h1 className='title'>Connect with us</h1>
@@ -35,13 +35,11 @@ function Footer() {
         <div className="icon_div"><AiFillYoutube className='icon'/> Youtube</div>
         <div className="icon_div"><BiLogoPinterest className='icon'/> Pinterest</div>
         <div className="icon_div"><FaSnapchat className='icon'/> Snapchat</div>
-
 </div>
-
-
       </div>
     </div>
   )
 }
 
 export default Footer
+
