@@ -5,6 +5,12 @@ import { navbarmenu } from './data'
 import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
   const navigate= useNavigate()
+  const goToCart = () => {
+    navigate('/cart');
+  };
+  const goToWishlist = () => {
+    navigate('/wishlist');
+  };
 
   return (
     <div className='Navbar_Main'>
