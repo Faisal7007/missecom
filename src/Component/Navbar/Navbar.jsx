@@ -1,7 +1,6 @@
 import React from 'react'
 import './navbar.scss'
-import {RiRefreshLine} from 'react-icons/ri'
-import {HiOutlineShoppingCart} from 'react-icons/hi'
+import { iconsmenu } from './icons'
 import { navbarmenu } from './data'
 import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
@@ -31,11 +30,13 @@ const Navbar = () => {
             </div>
             {/* Navbar icons  */}
             <div className='Navbar_Icons'>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-regular fa-heart"></i>
-            <RiRefreshLine />
-            <HiOutlineShoppingCart />
+          {
+            iconsmenu.map((item,id)=>{
+              return(
+                <div>{item.icons}</div>
+              )
+            })
+          }
             </div>
         </div>
     </div>
@@ -43,3 +44,12 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+    // {/* <i class="fa-solid fa-magnifying-glass"></i> */}
+            // {/* <i class="fa-regular fa-user"></i> */}
+            // {/* <i class="fa-regular fa-heart"></i> */}
+            // <RiSearchLine/>
+            // <FaRegUser/>
+            // <FaRegHeart/>
+            // <RiRefreshLine />
+            // <HiOutlineShoppingCart />
