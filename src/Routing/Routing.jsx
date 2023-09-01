@@ -7,12 +7,13 @@ import Home from '../Pages/Home/Home'
 const Routing = () => {
   return (
     <div className='Main_Routing'>
-      <Navbar/>
+      
       <Router>
+      <Navbar/>
       <Routes>
-        <Route exact path='/' element={<Home  />}/>
-        <Route exact path='/design' element={<Design/>}/>
-        <Route exact path='/blog' element={<Blog/>}/>
+        <Route exact path='/' element={<Home/>}/>
+        <Route  path='/design' element={<Design/>}/>
+        <Route  path='/blog' element={<Blog/>}/>
       </Routes>
     </Router>
     </div>

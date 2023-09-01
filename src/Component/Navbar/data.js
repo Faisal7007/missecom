@@ -1,4 +1,8 @@
-const navbarmenu = [
+export const navbarmenu = [
+    {
+        name:"Home",
+        url:"/",
+    },
     {
         name:"Design",
         url:"/design"
