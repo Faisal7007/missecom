@@ -33,7 +33,7 @@ const Navbar = () => {
           {
             iconsmenu.map((item,id)=>{
               return(
-                <div>{item.icons}</div>
+                <div style={{cursor:'pointer'}}>{item.icons}</div>
               )
             })
           }
