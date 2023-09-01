@@ -36,13 +36,6 @@ const Navbar = () => {
             </div>
             {/* Navbar icons  */}
             <div className='Navbar_Icons'>
-<<<<<<< HEAD
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-regular fa-heart" onClick={goToWishlist} id='wish'></i>
-            <RiRefreshLine  />
-            <HiOutlineShoppingCart onClick={goToCart} id='cart' />
-=======
           {
             iconsmenu.map((item,id)=>{
               return(
@@ -50,7 +43,6 @@ const Navbar = () => {
               )
             })
           }
->>>>>>> meezan
             </div>
         </div>
     </div>
