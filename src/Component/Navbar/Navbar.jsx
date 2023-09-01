@@ -45,11 +45,4 @@ const Navbar = () => {
 
 export default Navbar
 
-    // {/* <i class="fa-solid fa-magnifying-glass"></i> */}
-            // {/* <i class="fa-regular fa-user"></i> */}
-            // {/* <i class="fa-regular fa-heart"></i> */}
-            // <RiSearchLine/>
-            // <FaRegUser/>
-            // <FaRegHeart/>
-            // <RiRefreshLine />
-            // <HiOutlineShoppingCart />
+ 
