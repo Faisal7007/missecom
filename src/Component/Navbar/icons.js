@@ -5,18 +5,22 @@ import {FaRegHeart} from 'react-icons/fa'
 import {FaRegUser} from 'react-icons/fa'
 export const iconsmenu = [
     {
-        icons:<RiSearchLine/>
+        icons:<RiSearchLine/>,
+        url:"/"
     },
     {
-        icons:<FaRegUser/>
+        icons:<FaRegUser/>,
+        url:'/account'
     },
     {
-        icons:<FaRegHeart/>
+        icons:<FaRegHeart/>,
+        url:'/wishlist'
     },
     {
         icons: <RiRefreshLine />
     },
     {
-        icons:<HiOutlineShoppingCart />
+        icons:<HiOutlineShoppingCart />,
+        url:'/cart'
     }
 ]

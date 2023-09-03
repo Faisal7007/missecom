@@ -5,12 +5,12 @@ import { navbarmenu } from './data'
 import { useNavigate } from 'react-router-dom'
 const Navbar = () => {
   const navigate= useNavigate()
-  const goToCart = () => {
-    navigate('/cart');
-  };
-  const goToWishlist = () => {
-    navigate('/wishlist');
-  };
+  // const goToCart = () => {
+  //   navigate('/cart');
+  // };
+  // const goToWishlist = () => {
+  //   navigate('/wishlist');
+  // };
 
   return (
     <div className='Navbar_Main'>
@@ -39,7 +39,7 @@ const Navbar = () => {
           {
             iconsmenu.map((item,id)=>{
               return(
-                <div>{item.icons}</div>
+                <div key={id} className='nav-items' onClick={()=>navigate(item.url)}>{item.icons}</div>
               )
             })
           }
