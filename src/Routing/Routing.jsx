@@ -9,6 +9,9 @@ import Wish from '../Pages/Yourwishlist/Wish'
 import Footer from '../Component/Footer/Footer'
 import Copyright from '../Component/Copyright/Copyright'
 import Account from '../Pages/Account/Account'
+import MobileCovers from '../Pages/MobileCovers/MobileCovers'
+import Keychains from '../Pages/Keychains/Keychains'
+import VectorArt from '../Pages/VectorArt/VectorArt'
 const Routing = () => {
   return (
     <div className='Main_Routing'>
@@ -22,6 +25,10 @@ const Routing = () => {
         <Route  path='/cart' element={<Cart/>}/>
         <Route  path='/wishlist' element={<Wish/>}/>
         <Route  path='/account' element={<Account/>}/>
+        <Route  path='/mobile-covers' element={<MobileCovers/>}/>
+        <Route  path='/keychains' element={<Keychains/>}/>
+        <Route  path='/vector-art' element={<VectorArt/>}/>
+        
       </Routes>
       <Footer/>
       <Copyright/>
