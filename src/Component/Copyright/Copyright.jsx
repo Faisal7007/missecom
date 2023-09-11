@@ -11,7 +11,7 @@ const Copyright = () => {
         <p>EDUWEB TECHNOLOGIES</p>
         </div>
         
-    </div>
+    </div> 
   )
 }
 
