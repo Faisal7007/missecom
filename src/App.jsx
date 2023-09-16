@@ -3,11 +3,13 @@ import Routing from './Routing/Routing';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
-
+import { AuthProvider } from '../src/Contexts/AuthContext';
 function App() {
   return (
     <div className="App">
-      <Routing/>
+      <AuthProvider>
+        <Routing />
+      </AuthProvider>
      
       <ToastContainer
         position="bottom-center"
