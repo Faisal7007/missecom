@@ -6,13 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import { CartProvider } from '../src/Pages/Addtocart/CartContext';
 import { Provider } from 'react-redux';
 import store from '../src/Redux/store';
-
+import { WishlistProvider } from '../src/Contexts/WishlistContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
      <Provider store={store}>
       <CartProvider>
-        <App />
+      <WishlistProvider> 
+      <App />
+    </WishlistProvider>
       </CartProvider>
     </Provider>
   </React.StrictMode>
