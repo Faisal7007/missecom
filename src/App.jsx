@@ -19,7 +19,8 @@ function App() {
         toastStyle={{
           backgroundColor: 'black',
           color: '#ffd230',
-          borderRadius: '25px'
+          borderRadius: '25px',
+          width: 'auto'
         }}
         bodyClassName="toast-body"
         icon={<div style={{ display: 'flex', alignItems: 'center',justifyContent:'space-between' }}>
