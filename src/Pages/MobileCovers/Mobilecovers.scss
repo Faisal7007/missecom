@@ -36,4 +36,18 @@
   .custom-toast-container .Toastify__progress-bar {
     display: none !important;
   }
+  .product-card {
+    position: relative;
+  }
+  
+  .heart-icon {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    transition: all .5s;
+    padding: 5px;
+  }
+  .filledheart{
+    color: rgb(236, 81, 81);
+  }
   

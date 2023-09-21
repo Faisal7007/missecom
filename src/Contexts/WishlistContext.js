@@ -1,23 +1,18 @@
 // WishlistContext.js
-import React, { createContext, useState, useContext } from 'react';
+import React, { useState, createContext } from 'react';
 
-const WishlistContext = createContext();
-
-export const useWishlist = () => {
-  return useContext(WishlistContext);
-};
+export const WishlistContext = createContext();
 
 export const WishlistProvider = ({ children }) => {
   const [wishlistItems, setWishlistItems] = useState([]);
 
   const addToWishlist = (item) => {
-    // Add item to the wishlistItems state
     setWishlistItems([...wishlistItems, item]);
   };
 
-  const removeFromWishlist = (itemId) => {
-    // Remove item from the wishlistItems state
-    setWishlistItems(wishlistItems.filter((item) => item.id !== itemId));
+  const removeFromWishlist = (id) => {
+    const updatedWishlist = wishlistItems.filter(item => item.id !== id);
+    setWishlistItems(updatedWishlist);
   };
 
   return (
@@ -26,5 +21,3 @@ export const WishlistProvider = ({ children }) => {
     </WishlistContext.Provider>
   );
 };
-
-export default WishlistContext;

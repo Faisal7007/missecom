@@ -15,6 +15,8 @@ import VectorArt from "../Pages/VectorArt/VectorArt";
 import ForgotPassword from '../Pages/ForgotPassword/ForgotPassword'
 import SignUp from '../Pages/SignUp/SignUp'
 import ResetPassword from "../Pages/ForgotPassword/ResetPassword";
+import AddProducts from "../Pages/AddProducts/AddProducts";
+import BuyNow from "../Pages/BuyNow/BuyNow";
 const Routing = () => {
   return (
     <div className="Main_Routing">
@@ -33,7 +35,8 @@ const Routing = () => {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/reset-password" element={<ResetPassword/>} />
-
+          <Route path="/add-products" element={<AddProducts/>}/>
+          <Route path="/buy-now" element={<BuyNow/>}/>
         </Routes>
         <Footer />
         <Copyright />

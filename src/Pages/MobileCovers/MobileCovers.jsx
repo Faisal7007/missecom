@@ -1,20 +1,43 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext,useState } from 'react';
 import './Mobilecovers.scss';
 import mobilebanner from '../../videos/mobilebanner.mp4'
 import { data } from './data.js'
 import { HiOutlineShoppingCart } from 'react-icons/hi'
 import { CartContext } from '../Addtocart/CartContext';
+import {AiOutlineHeart,AiFillHeart} from 'react-icons/ai'
 import { toast } from 'react-toastify';
+import { WishlistContext } from '../../Contexts/WishlistContext';
+import { useNavigate } from 'react-router-dom';
 const Product = ({ id,image, name, price }) => {
   const { addToCart } = useContext(CartContext);
+  const [isWished, setIsWished] = useState(false);
+  const { wishlistItems, addToWishlist, removeFromWishlist } = useContext(WishlistContext);
+   const navigate=useNavigate();
+  const handleToggleWishlist = () => {
+    setIsWished(prevState => !prevState);
 
+    if (!isWished) {
+      addToWishlist({ id, image, name, price });
+      toast.success('Item added to wishlist!');
+    } else {
+      removeFromWishlist(id);
+      toast.success('Item removed from wishlist.');
+    }
+  };
   const handleAddToCart = () => {
     addToCart({ id,image, name, price });
     toast.success('Added to cart');
   };
+  const handleBuyNow = () => {
+   
+    navigate('/buy-now');
+  };
 
   return (
-    <div className='product-card' key={id}>
+    <div className='product-card' key={id}  onClick={handleBuyNow}>
+     <div className="heart-icon" onClick={handleToggleWishlist}>
+        {isWished ? <AiFillHeart className='filledheart' /> : <AiOutlineHeart />}
+      </div>
       <img src={image} alt={name} />
       <div className='details'>
         <h3>{name}</h3>

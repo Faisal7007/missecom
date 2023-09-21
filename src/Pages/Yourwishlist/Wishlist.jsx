@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
-import  WishlistContext  from '../../Contexts/WishlistContext';
+import { WishlistContext } from '../../Contexts/WishlistContext';
 import './Wishlist.scss'
+import { AiFillHeart } from 'react-icons/ai';
 const Wish = () => {
   const { wishlistItems, removeFromWishlist } = useContext(WishlistContext);
 
   return (
     <div className='wishlist'>
-      <h2>Wishlist</h2>
+      
       {wishlistItems.length > 0 ? (
         <div className='wishlist-items'>
           {wishlistItems.map(item => (
@@ -20,8 +21,10 @@ const Wish = () => {
             </div>
           ))}
         </div>
-      ) : (
+      ) : (<div className="empty-cart-message">
+      <h2><AiFillHeart/></h2>
         <p>Your wishlist is empty.</p>
+        </div>
       )}
     </div>
   );

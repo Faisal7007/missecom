@@ -17,7 +17,8 @@ export const iconsmenu = [
         url:'/wishlist'
     },
     {
-        icons: <RiRefreshLine />
+        icons: <RiRefreshLine />,
+        url:'/add-products'
     },
     {
         icons:<HiOutlineShoppingCart />,
