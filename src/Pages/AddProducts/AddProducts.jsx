@@ -91,6 +91,23 @@ const AddProducts = () => {
             <option value="vector art">Vector Art</option>
           </select>
         </div>
+        <div className="form-group">
+          <label>Return Duration:</label>
+          <select
+            name="category"
+            value={formData.returnDuration}
+            onChange={handleInputChange}
+            required
+          >
+            <option value="">Select a Duration </option>
+
+            <option value="No Return">No Return</option>
+            <option value="7 Days Return">7 Days Return</option>
+            <option value="7 Days Replacement">7 Days Replacement</option>
+            <option value="30 Days Return">30 Days Return</option>
+            <option value="30 Days Replacement">30 Days Replacement</option>
+          </select>
+        </div>
 
         <div className="form-group">
           <label>Price:</label>

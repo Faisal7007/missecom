@@ -35,7 +35,7 @@ const Product = ({ id, image, name, price }) => {
   };
 
   return (
-    <div className='product-card' key={id}  onClick={handleBuyNow}>
+    <div className='product-card' key={id}  >
       <div className="heart-icon" onClick={handleToggleWishlist}>
         {isWished ? <AiFillHeart className='filledheart' /> : <AiOutlineHeart />}
       </div>
@@ -46,7 +46,7 @@ const Product = ({ id, image, name, price }) => {
         <p>Rating: {data.products[id - 1].rating}</p>
         <p>{data.products[id - 1].sold}</p>
       </div>
-      <button>BUY NOW</button>
+      <button onClick={handleBuyNow}>BUY NOW</button>
       <button onClick={handleAddToCart}>ADD TO CART <HiOutlineShoppingCart /></button>
     </div>
   );

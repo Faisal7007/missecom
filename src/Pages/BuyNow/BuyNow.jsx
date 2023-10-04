@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./BuyNow.scss";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { toast } from "react-toastify";
-import {TbReplace,TbTruckDelivery} from 'react-icons/tb'
-import {GiTakeMyMoney} from 'react-icons/gi'
-import {MdAssuredWorkload} from 'react-icons/md'
-import {FaAward} from 'react-icons/fa'
+import { TbReplace, TbTruckDelivery } from "react-icons/tb";
+import { GiTakeMyMoney } from "react-icons/gi";
+import { MdAssuredWorkload } from "react-icons/md";
+import { FaAward } from "react-icons/fa";
 const BuyNow = () => {
   const [quantity, setQuantity] = useState(1);
 
@@ -42,7 +42,15 @@ const BuyNow = () => {
           <div className="inside-detail">
             <h2>Product Name</h2>
             <p>Product Description</p>
-            <p>Price: $99.99</p>
+            <div className="stars">
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="rating">4.8</span>
+            </div>
+            <p>Price:  Rs. 299</p>
           </div>
 
           <div className="quantity-selection">
@@ -81,12 +89,82 @@ const BuyNow = () => {
         </div>
       </div>
       <div className="assurance-div">
-        <div className="assurance-box"><TbReplace/> 7 days replacement</div>
-        <div className="assurance-box"><TbTruckDelivery/> Free Delivery</div>
-        <div className="assurance-box"><GiTakeMyMoney/> Pay On Delivery</div>
-        <div className="assurance-box"><FaAward/>Top Quality</div>
-        <div className="assurance-box"><MdAssuredWorkload/>Assured Delivery</div>
+        <div className="assurance-box">
+          <TbReplace /> 7 days replacement
+        </div>
+        <div className="assurance-box">
+          <TbTruckDelivery /> Free Delivery
+        </div>
+        <div className="assurance-box">
+          <GiTakeMyMoney /> Pay On Delivery
+        </div>
+        <div className="assurance-box">
+          <FaAward />
+          Top Quality
+        </div>
+        <div className="assurance-box">
+          <MdAssuredWorkload />
+          Assured Delivery
+        </div>
       </div>
+      <div className="review-rating">
+        <div className="head">
+          <h1>Customer Reviews</h1>
+        </div>
+        <div className="reviews">
+          <div className="review">
+            <div className="username">John Doe</div>
+            <div className="rating">
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+            </div>
+            <div className="comment">Great product! I love it.</div>
+          </div>
+          <div className="review">
+            <div className="username">Jane Smith</div>
+            <div className="rating">
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9734;</span>
+            </div>
+            <div className="comment">Good quality but a bit pricey.</div>
+          </div>
+          <div className="review">
+            <div className="username">David Johnson</div>
+            <div className="rating">
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+            </div>
+            <div className="comment">
+              Absolutely amazing! Worth every penny.
+            </div>
+          </div>
+          <div className="review">
+            <div className="username">Sarah Williams</div>
+            <div className="rating">
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9733;</span>
+              <span className="star">&#9734;</span>
+            </div>
+            <div className="comment">Fast shipping and great quality.</div>
+          </div>
+        </div>
+        {/* Add more reviews here */}
+      </div>
+    <div className="similar-products">
+      <div className="head"><h1>Products you may also like</h1></div>
+      
+    </div>
     </div>
   );
 };
