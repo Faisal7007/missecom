@@ -6,9 +6,10 @@ import { TbReplace, TbTruckDelivery } from "react-icons/tb";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { MdAssuredWorkload } from "react-icons/md";
 import { FaAward } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const BuyNow = () => {
   const [quantity, setQuantity] = useState(1);
-
+  const navigate=useNavigate();
   const handleQuantityChange = (e) => {
     const newQuantity = parseInt(e.target.value, 10);
     if (!isNaN(newQuantity) && newQuantity >= 1) {
@@ -27,7 +28,7 @@ const BuyNow = () => {
   };
 
   const handleBuyNow = () => {
-    // Add logic to handle the purchase (e.g., make an API call)
+    navigate('/order-now')
   };
   const handleAddToCart = () => {
     // addToCart({ id, image, name, price });

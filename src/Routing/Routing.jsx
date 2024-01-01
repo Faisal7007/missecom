@@ -17,6 +17,9 @@ import SignUp from '../Pages/SignUp/SignUp'
 import ResetPassword from "../Pages/ForgotPassword/ResetPassword";
 import AddProducts from "../Pages/AddProducts/AddProducts";
 import BuyNow from "../Pages/BuyNow/BuyNow";
+import OrderNow from "../Pages/OrderNow/OrderNow";
+import UserDetail from "../Pages/UserDetail/UserDetail";
+import Payment from "../Pages/Payment/Payment";
 const Routing = () => {
   return (
     <div className="Main_Routing">
@@ -37,6 +40,10 @@ const Routing = () => {
           <Route path="/reset-password" element={<ResetPassword/>} />
           <Route path="/add-products" element={<AddProducts/>}/>
           <Route path="/buy-now" element={<BuyNow/>}/>
+          <Route path="/order-now" element={<OrderNow/>}/>
+          <Route path="/userdetails" element={<UserDetail/>}/>
+          <Route path="/payment" element={<Payment/>}/>
+          
         </Routes>
         <Footer />
         <Copyright />

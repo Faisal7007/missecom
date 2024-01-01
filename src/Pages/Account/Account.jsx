@@ -3,18 +3,26 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../../Slices/authSlice';
 import './Account.scss'; 
 import { useNavigate } from 'react-router-dom';
-
+import {login} from './login'
 const Account = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate() 
   const handleLogin = () => {
-    // Validate username and password (e.g., make an API call)
-    // If successful, dispatch setUser action to update auth state
-    dispatch(setUser({ name: username }));
+    const foundUser = login.find(user => user.username === username && user.password === password);
+  
+    if (foundUser) {
+      dispatch(setUser({ name: username }));
+      navigate('/userdetails'); 
+    } else {
+      alert('Invalid username or password. Please try again.'); 
+    }
+    setUsername("");
+    setPassword("")
   };
+  
   const handleForgotPassword = () => {
     navigate('/forgot-password'); 
   };
